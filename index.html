@@ -17,20 +17,7 @@
       overflow: hidden;
     }
 
-    /* Responsive adjustments */
-    @media only screen and (max-width: 600px) {
-      img {
-        width: 100%;
-        height: auto;
-      }
-      .rectangle {
-        width: 20px;
-        height: 300px;
-        margin-left: 40px;
-        margin-bottom: 40px;
-      }
-    }
-
+    /* Image settings */
     img {
       width: 100%;
       height: 100vh;
@@ -51,12 +38,12 @@
 
     /* Click target */
     .click-target {
-      width: 30%; /* Width reduced to 30% */
-      height: 10%; /* Height reduced to 10% */
+      width: 30%;
+      height: 10%;
       background-color: transparent;
       position: absolute;
-      top: 70%; /* Center within the rectangle vertically */
-      left: 35%; /* Center within the rectangle horizontally */
+      top: 70%;
+      left: 35%;
       cursor: pointer;
     }
 
@@ -107,7 +94,34 @@
       font-weight: bold;
       pointer-events: none;
       z-index: 999;
-      transform: translate(-360%, -50%); /* Center the "X" exactly on the click */
+      transform: translate(-360%, -50%);
+    }
+
+    /* Responsive adjustments */
+    @media only screen and (max-width: 600px) {
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .rectangle {
+        width: 20px;
+        height: 300px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+      .click-target {
+        width: 50%;
+        height: 15%;
+        top: 60%;
+        left: 25%;
+      }
+      .modal-content {
+        padding: 20px;
+      }
+      .modal button {
+        padding: 8px 16px;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -166,7 +180,7 @@
         // Remove the red X after a delay
         setTimeout(function() {
           redX.remove();
-        }, 300); // Red X disappears after 1 second
+        }, 300);
       }
     });
   </script>
