@@ -65,6 +65,9 @@
       padding: 20px;
       text-align: center;
       z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .modal-content {
@@ -72,7 +75,16 @@
       padding: 30px;
       border-radius: 10px;
       max-width: 500px;
-      margin: 50px auto;
+      width: 90%;
+      text-align: center;
+    }
+
+    .modal h2 {
+      font-size: 24px;
+    }
+
+    .modal p {
+      font-size: 16px;
     }
 
     .modal button {
@@ -94,30 +106,38 @@
       font-weight: bold;
       pointer-events: none;
       z-index: 999;
-      transform: translate(-50%, -50%); /* Center "X" on the click */
+      transform: translate(-50%, -50%);
     }
 
-    /* Responsive adjustments */
+    /* Responsive adjustments for mobile */
     @media only screen and (max-width: 600px) {
-      img {
-        width: 100%;
-        height: auto;
-      }
       .rectangle {
-        width: 20px;
+        width: 12px;
         height: 190px;
         margin-left: 20px;
         margin-bottom: 20px;
       }
       .click-target {
-        width: 50%;
+        width: 30%;
         height: 15%;
-        top: 100%;
-        left: 30%;
+        top: 76%;
+        left: 25%;
       }
+
+      /* Adjust modal content for mobile */
       .modal-content {
         padding: 20px;
+        max-width: 90%;
       }
+      
+      .modal h2 {
+        font-size: 20px;
+      }
+
+      .modal p {
+        font-size: 14px;
+      }
+
       .modal button {
         padding: 8px 16px;
         font-size: 16px;
@@ -144,7 +164,7 @@
   <script>
     // Show modal on page load
     window.onload = function() {
-      document.getElementById("myModal").style.display = "block";
+      document.getElementById("myModal").style.display = "flex";
     };
 
     // Close modal
