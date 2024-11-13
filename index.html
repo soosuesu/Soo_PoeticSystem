@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +40,7 @@
     /* Click target */
     .click-target {
       width: 30%;
-      height: 10%;
+      height: 20%;
       background-color: transparent;
       position: absolute;
       top: 70%;
@@ -73,15 +74,6 @@
       border-radius: 10px;
       max-width: 500px;
       margin: 50px auto;
-      text-align: center;
-    }
-
-    .modal h2 {
-      font-size: 24px;
-    }
-
-    .modal p {
-      font-size: 16px;
     }
 
     .modal button {
@@ -103,13 +95,17 @@
       font-weight: bold;
       pointer-events: none;
       z-index: 999;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); /* Center "X" on the click */
     }
 
-    /* Responsive adjustments for mobile */
+    /* Responsive adjustments */
     @media only screen and (max-width: 600px) {
+      img {
+        width: 100%;
+        height: auto;
+      }
       .rectangle {
-        width: 12px;
+        width: 20px;
         height: 190px;
         margin-left: 20px;
         margin-bottom: 20px;
@@ -118,24 +114,11 @@
         width: 50%;
         height: 15%;
         top: 76%;
-        left: 25%;
+        left: 30%;
       }
-
-      /* Adjust only modal content for mobile */
       .modal-content {
-        padding: 15px;
-        max-width: 90%;
-        margin: 0;
+        padding: 20px;
       }
-
-      .modal h2 {
-        font-size: 18px;
-      }
-
-      .modal p {
-        font-size: 14px;
-      }
-
       .modal button {
         padding: 8px 16px;
         font-size: 16px;
